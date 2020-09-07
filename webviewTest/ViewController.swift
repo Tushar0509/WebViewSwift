@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func redirectButtonPressed(_ sender: UIButton) {
+        let vc = SFSafariViewController(url: URL(string: "https://www.google.com/")!)
+        
+        present(vc,animated: true)
+        
+    }
+    
 }
 
